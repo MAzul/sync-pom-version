@@ -17,6 +17,7 @@ function main (pomPath, packagePath) {
 
   var packageContent = fs.readFileSync(packagePath, 'utf8');
   var packageVersion = JSON.parse(packageContent).version;
+  var packageVersion = packageVersion.substring(0, s.indexOf(args[2]));
 
   console.log('found version ' + packageVersion + ' in package.json');
 
